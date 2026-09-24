@@ -35,11 +35,25 @@ PROCESSED_DIR = os.path.join(
     "processed"
 )
 
-INDICATOR_FILE = os.path.join(
+# Ưu tiên dữ liệu đầy đủ khi chạy trên máy cá nhân.
+# Khi deploy, nếu không có file đầy đủ thì sử dụng dataset Web nhẹ.
+
+FULL_DATA_FILE = os.path.join(
     PROCESSED_DIR,
     "stock_data_indicators.csv"
 )
 
+WEB_DATA_FILE = os.path.join(
+    PROCESSED_DIR,
+    "stock_data_web.csv"
+)
+
+# Chạy local: dùng dữ liệu đầy đủ
+# Deploy Web: tự động dùng dataset nhẹ
+if os.path.exists(FULL_DATA_FILE):
+    INDICATOR_FILE = FULL_DATA_FILE
+else:
+    INDICATOR_FILE = WEB_DATA_FILE
 SCREENER_FILE = os.path.join(
     PROCESSED_DIR,
     "stock_screener.csv"
