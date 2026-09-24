@@ -1,0 +1,30 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Raw data / file tải từ CafeF
+data/raw/
+*.zip
+
+# Dữ liệu xử lý dung lượng lớn
+data/processed/stock_data_clean.csv
+data/processed/stock_data_indicators.csv
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
