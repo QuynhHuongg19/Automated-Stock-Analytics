@@ -60,6 +60,7 @@ Stocks are then classified according to the number of conditions satisfied.
 > The screening results are designed for technical analysis and educational purposes and should not be interpreted as investment recommendations.
 
 ## 🖥️ Dashboard
+![Automated Stock Analytics Dashboard](assets/dashboard.png)
 
 The Streamlit application allows users to:
 
